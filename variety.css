@@ -1,0 +1,214 @@
+body{
+    background-color:rgb(44,44,221);
+    margin:0;
+    padding:0;
+}
+/* Էջի վերևի մասը */
+.site{
+  width:100%;
+}
+.Airwall{
+    color:rgb(236, 236, 210);
+    font-size: 2.8em;
+    font-family: Montserrat Alternates;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    padding-top: 0;
+    margin-block:0;
+    margin-left:0;
+    animation-name:Airwall-animation;
+    position:relative;
+    animation-timing-function:ease-out;
+    animation-duration:2s;
+   }
+   #outherbuttons{
+    display: flex; 
+    flex-shrink:0;
+    flex-grow:1;
+    justify-content:center;
+    text-align: center;
+    vertical-align:top;
+   }
+   .buttons{
+        background-color:rgb(44, 44, 221);
+        color:rgb(44, 44, 221);
+        color:rgb(236, 236, 210);
+        font-size: 2.5rem;
+        padding-block:0.45em;
+        padding-inline:0.6em;
+        border-width:0.03em;
+        border-radius:0.7em;
+        border-color: rgb(236, 236, 210);
+        cursor:pointer;
+        transition: 0.6s;
+        margin-right: 1em;
+        margin-top:0.55em;
+        vertical-align:top;
+        font-family: lobster;
+        box-shadow:1px 1px 4px rgb(236, 236, 210);
+        position:relative;
+        animation-name: buttons-animation;
+        animation-timing-function:ease-out;
+        animation-duration:2s;
+    }
+   .buttons:hover{
+    padding-bottom:1.03em;
+    padding-top:1em;
+    padding-inline:1.6em;
+    color:rgb(44, 44, 221);
+    font-size:2.45rem;
+    background-color:rgb(236, 236, 210);
+    box-shadow:4px 5px 8px -4px rgb(236, 236, 210);
+   }
+   .buttons:Active{
+    opacity: 0.8;
+   }
+   #second_header{
+    margin-top:0.5em;
+    margin-bottom:1.5em;
+    display:inline-block;
+    margin-left:50%;
+    font-size:3.5em;
+    color:rgb(236, 236, 210);
+    font-family:Lobster;
+    position:relative;
+    animation-name: img-animation;
+    animation-timing-function:ease-out;
+    animation-duration:2s;
+   }
+   .container{
+    margin-top:5em;
+    display:flex;
+    justify-content:space-around;
+   }
+.images{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  width:20em;
+  height:25em;
+  object-fit:cover;
+  border-radius:1em;
+  box-shadow:-1px 1px 2px rgb(236, 236, 210);
+  border-style:groove;
+  position:relative;
+  animation-name: img-animation;
+  animation-timing-function:ease-out;
+  animation-duration:2s;
+}
+
+.text{
+  color:rgb(236, 236, 210);
+  font-family:Jost;
+  font-size:2.5em;
+  font-weight:bold;
+  position:relative;
+  animation-name: img-animation;
+  animation-timing-function:ease-out;
+  animation-duration:2s;
+}
+/* Սոց-ցանցեր */
+   .social {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-right:0.3em;
+    margin-top:15vh;
+    cursor: pointer;
+    color: rgb(44, 44, 221);
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid rgb(44, 44, 221);
+    vertical-align:top;
+    position:relative;
+    animation-name: social-animations;
+  animation-timing-function:ease-out;
+  animation-duration:2s;
+  }
+  .social:hover {
+    color: rgb(236, 236, 210);
+    transform: scale(1.1);
+    outline: 2px solid rgb(44, 44, 221);
+    box-shadow: 4px 5px 17px -4px rgb(44, 44, 221);
+  }
+  .social::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color:rgb(44, 44, 221);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  .social:hover::before {
+    width: 250%;
+  }
+  @media only screen and (max-width: 600px){
+    .site{
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 601px){
+    .site{
+      width: 100%;
+    }
+  }
+  @keyframes Airwall-animation{
+    0%{ 
+      left:-250px;
+    }
+    100%{
+      left:0px;
+    }
+  }
+  @keyframes buttons-animation{
+    0%{
+  left:800px;
+    }
+    100%{
+  left:0;
+    }
+  }
+  @keyframes social-animations{
+    0%{
+   opacity:0;
+    }
+    100%{
+    opacity:1;
+    }
+  }
+  @keyframes img-animation{
+    0%{
+    opacity:0;
+    scale:0.65;
+    }
+    100%{
+    opacity:1;
+    scale:1; 
+    }
+  }
+  ::-webkit-scrollbar{
+    width:0.8em;
+  }
+  ::-webkit-scrollbar-track{
+    background-color:rgb(236, 236, 210);
+    border-radius:20px;
+    margin-block:0.5em;
+  }
+  ::-webkit-scrollbar-thumb{
+  background:linear-gradient(red, blue, orange);
+  border-radius:20px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+   background-color:rgb(95, 95, 85);
+  }

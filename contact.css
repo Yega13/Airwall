@@ -1,0 +1,274 @@
+body{
+    background-color:rgb(44,44,221);
+    margin:0;
+    padding:0;
+}
+::-webkit-scrollbar{
+  width:0.8em;
+}
+::-webkit-scrollbar-track{
+  background-color:rgb(236, 236, 210);
+  border-radius:20px;
+  margin-block:0.5em;
+}
+::-webkit-scrollbar-thumb{
+background:linear-gradient(red, blue, orange);
+border-radius:20px;
+}
+
+/* Էջի վերևի մասը */
+.Airwall{
+    color:rgb(236, 236, 210);
+    font-size: 2.8em;
+    font-family: Montserrat Alternates;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    padding-top: 0;
+    margin-block:0;
+    margin-left:0;
+    animation-name:Airwall-animation;
+    position:relative;
+    animation-timing-function:ease-out;
+    animation-duration:2s;
+   }
+   #outherbuttons{
+    display: flex; 
+    flex-shrink:0;
+    flex-grow:1;
+    justify-content:center;
+    text-align: center;
+    vertical-align:top;
+   }
+   #headerButtons{
+    display: flex; 
+    gap:15em; 
+    flex-shrink:0;
+   }
+   .buttons{
+    background-color:rgb(44, 44, 221);
+    color:rgb(44, 44, 221);
+    color:rgb(236, 236, 210);
+    font-size: 2.5rem;
+    padding-block:0.45em;
+    padding-inline:0.6em;
+    border-width:0.03em;
+    border-radius:0.7em;
+    border-color: rgb(236, 236, 210);
+    cursor:pointer;
+    transition: 0.6s;
+    margin-right: 1em;
+    margin-top:0.55em;
+    vertical-align:top;
+    font-family: lobster;
+    box-shadow:1px 1px 4px rgb(236, 236, 210);
+    position:relative;
+    animation-name: buttons-animation;
+    animation-timing-function:ease-out;
+    animation-duration:2s;
+    }
+   .buttons:hover{
+    padding-bottom:1.03em;
+     padding-top:1em;
+     padding-inline:1.6em;
+     color:rgb(44, 44, 221);
+     font-size:2.45rem;
+     background-color:rgb(236, 236, 210);
+     box-shadow:4px 5px 8px -4px rgb(236, 236, 210);
+   }
+   .buttons:Active{
+    opacity: 0.8;
+   }
+   #line{
+    margin-top:0.05em;
+   }
+
+   /* Սոց-ցանցեր */
+   #Footer{
+    width:100%;
+   }
+   .social {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-right:0.3em;
+    margin-top:45vh;
+    cursor: pointer;
+    color: rgb(44, 44, 221);
+    transition: all 1000ms;
+    font-size: 15px;
+    overflow:hidden;
+    outline: 2px solid rgb(44, 44, 221);
+    vertical-align:top;
+    position:relative;
+    animation-name: social-animations;
+  animation-timing-function:ease-out;
+  animation-duration:2s;
+  }
+  .social:hover {
+    color: rgb(236, 236, 210);
+    transform: scale(1.1);
+    outline: 2px solid rgb(44, 44, 221);
+    box-shadow: 4px 5px 17px -4px rgb(44, 44, 221);
+  }
+  .social::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color:rgb(44, 44, 221);
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  .social:hover::before {
+    width: 250%;
+  }
+  #contact{
+    display:flex;
+    flex-wrap:wrap;
+    flex-shrink: 1;
+    flex-grow:1;
+    font-size:3em;
+    font-family:jua;
+    color:rgb(236, 236, 210);
+    margin-left:1.5em;
+    margin-top:0.5em;
+    animation-name:contact-animation;
+    animation-timing-function:ease-out;
+    animation-duration:2.5s;
+    position:relative;
+  }
+  #ContactHeading{
+    font-size:4rem; 
+    font-family:lobster;
+  }
+  @media screen and (min-width:300px) and (max-width:400px){ 
+    .Airwall{
+      color:rgb(236, 236, 210);
+      font-size:2em;
+      font-family: Montserrat alternates;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:start;
+      padding-top:0;
+      margin-block:0;
+      margin-inline:0;
+      animation-name:Airwall-animation;
+      position:relative;
+      animation-timing-function:ease-out;
+      animation-duration:2s;
+    }
+    .buttons{
+      background-color:rgb(44, 44, 221);
+      color:rgb(44, 44, 221);
+      color:rgb(236, 236, 210);
+      font-size: 1rem;
+      padding-block:0.1em;
+      padding-inline:0.3em;
+      border-width:0.02em;
+      border-radius:0.7em;
+      border-color: rgb(236, 236, 210);
+      cursor:pointer;
+      transition: 0.6s;
+      margin-right: 0.2em;
+      margin-top:1.5em;
+      vertical-align:top;
+      font-family: lobster;
+      box-shadow:1px 1px 4px rgb(236, 236, 210);
+      position:relative;
+      animation-name: buttons-animation;
+      animation-timing-function:ease-out;
+      animation-duration:2s;
+      }
+    #line{
+      margin-top:0.05em;
+      width: 500px;
+    }
+    #headerButtons{
+      gap:0.5em;
+    }
+    #contact{
+      display:flex;
+      flex-wrap:wrap;
+      flex-shrink: 1;
+      flex-grow:1;
+      font-size:1.5em;
+      font-family:jua;
+      color:rgb(236, 236, 210);
+      margin-left:1.5em;
+      margin-top:0.5em;
+      animation-name:contact-animation;
+      animation-timing-function:ease-out;
+      animation-duration:2.5s;
+      position:relative;
+    }
+    .social{
+      padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-right:0.4em;
+    margin-top:100vh;
+    cursor: pointer;
+    color: rgb(44, 44, 221);
+    transition: all 1000ms;
+    font-size: 7px;
+    overflow:hidden;
+    outline: 1px solid rgb(44, 44, 221);
+    vertical-align:top;
+    position:relative;
+    animation-name: social-animations;
+  animation-timing-function:ease-out;
+  animation-duration:2s;
+    }
+    #ContactHeading{
+      font-size:2rem;
+    }
+    #Footer{
+      width:500px;
+      display:inline-block;
+      align-items:right;
+    }
+  }
+  @keyframes Airwall-animation{
+    0%{ 
+      left:-250px;
+    }
+    100%{
+      left:0px;
+    }
+  }
+  @keyframes buttons-animation{
+    0%{
+  left:800px;
+    }
+    100%{
+  left:0;
+    }
+  }
+  @keyframes social-animations{
+    0%{
+   opacity:0;
+    }
+    100%{
+    opacity:1;
+    }
+  }
+  @keyframes contact-animation{
+    0%{
+    left:-500px;
+    }
+    100%{
+    left:0px;
+    }
+  }
+
+ 

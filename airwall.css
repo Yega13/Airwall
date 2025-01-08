@@ -1,0 +1,209 @@
+ body{
+    background:rgb(236, 236, 210);
+    margin:0;
+    padding:0;
+}
+
+/* Էջի վերևի մասը */
+.site{
+  width:100%;
+}
+.Airwall{
+ color:rgb(44, 44, 221);
+ font-size: 2.8em;
+ padding:0;
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:flex-start;
+ vertical-align:top;
+ font-family: Montserrat Alternates;
+ animation-name: Airwall-animation;
+ animation-duration:2s;
+ animation-timing-function:ease-out;
+ position:relative;
+}
+#outherbuttons{
+   display: flex;
+  flex-shrink:0;
+  flex-grow:1;
+   justify-content:center;  
+   text-align: center; 
+  vertical-align:top;
+}
+
+
+.buttons{
+  background-color:rgb(44, 44, 221);
+  color:rgb(44, 44, 221);
+  color:rgb(236, 236, 210);
+  font-size: 2.5rem;
+  padding-block:0.45em;
+  padding-inline:0.6em;
+  border-width:0.03em;
+  border-radius:0.7em;
+  border-color: rgb(236, 236, 210);
+  cursor:pointer;
+  transition: 0.6s;
+  margin-right: 1em;
+  margin-top:0.55em;
+  vertical-align:top;
+  font-family: lobster;
+  box-shadow:1px 1px 4px rgb(236, 236, 210);
+  position:relative;
+  animation-name: buttons-animation;
+  animation-timing-function:ease-out;
+  animation-duration:2s;
+ }
+.buttons:hover{
+  padding-bottom:1.03em;
+  padding-top:1em;
+  padding-inline:1.6em;
+  color:rgb(44, 44, 221);
+  font-size:2.45rem;
+  background-color:rgb(236, 236, 210);
+  box-shadow:4px 5px 8px -4px rgb(236, 236, 210);
+}
+.buttons:Active{
+ opacity: 0.8;
+}
+
+#main{
+  display: flex;
+  gap:100px;
+  flex-shrink:0;
+}
+.image{
+  display:flex;
+  justify-content:flex-start;
+  margin-top:2rem;
+  margin-left:1.5rem;
+  width:600px;
+  max-width:100%;
+  border-radius:20px;
+  box-shadow:1px 1px 4px rgba(175, 159, 159, 0.439);
+  border-style:solid;
+  border-width:1px;
+  border-color:rgba(175, 159, 159, 0.439);
+  transition:all 1000ms;
+  animation-name: image-animation;
+  animation-duration:1s;
+  animation-timing-function:ease-out;
+  position:relative;
+}
+.text{
+  display:flex;
+  justify-content:center;
+  background-color:rgb(236, 236, 210);
+  color:rgb(44, 44, 221);
+  font-size:2.5rem;
+  font-family:Jost;
+  vertical-align:top;
+  margin-top:270px;
+  padding-left:20px;
+  max-width:1000px;
+  border-style:solid;
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
+  border:none;
+  box-shadow:5px 4px 9px rgb(236, 236, 210);
+
+}
+
+#inner-main{
+  background-image: url('../gallery/sharq.PNG');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  background-size:cover;
+  box-shadow:0 0 2px 2px rgb(44, 44, 221);
+ }
+/* Սոց-ցանցեր */
+.social {
+  padding: 0.5em 1em;
+  margin-right:0.3em;
+  margin-top:21.8vh;
+  margin-bottom:8px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgb(44,44,221);
+  background-color:rgb(236, 236, 210);
+  transition: all 1000ms;
+  font-size: 15px;
+  overflow:hidden;
+  outline: 2px solid rgb(236, 236, 210);
+  vertical-align:top;
+  animation-name: social-animations;  
+  animation-timing-function:ease-out;
+  animation-duration:2s;
+  position:relative;
+}
+.social:hover {
+  color: rgb(236, 236, 210);
+  transform: scale(1.1);
+  outline: 2px solid rgb(44,44,221);
+  box-shadow: 4px 5px 17px -4px rgb(44,44,221);
+}
+.social::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color:rgb(44,44,221);
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+.social:hover::before{
+  width: 250%;
+}
+
+@media only screen and (max-width: 600px){
+  .site{
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 601px){
+  .site{
+    width: 100%;
+  }
+}
+@keyframes Airwall-animation{
+  0%{ 
+    left:-250px;
+  }
+  100%{
+    left:0px;
+  }
+}
+@keyframes buttons-animation{
+  0%{
+left:800px;
+  }
+  100%{
+left:0;
+  }
+}
+@keyframes social-animations{
+  0%{
+ opacity:0;
+  }
+  100%{
+  opacity:1;
+  }
+}
+@keyframes image-animation{
+  0%{
+ opacity:0;
+  }
+  100%{
+  opacity:1;
+  }
+}
+
+
